@@ -1,0 +1,52 @@
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 7.5vmin;
+}
+
+.score-container {
+    color: aliceblue;
+    border: 2px solid #AAA;
+    margin: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    --grid-size: 4;
+    --div-size: 20vmin;
+    --div-gap: 2vmin;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), var(--div-size));
+    grid-template-rows: repeat(var(--grid-size), var(--div-size));
+    background-color: #ccc;
+    gap: var(--div-gap);
+    border: 1vmin;
+    padding: var(--div-gap);
+    position: relative;
+    border-radius: 2vmin;
+}
+
+.content div {
+    background-color: #AAA;
+    border-radius: 1vmin;
+    display: grid;
+    font-size: 40px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    /* gap: 2vmin; */
+    /* background-color: yellow; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
